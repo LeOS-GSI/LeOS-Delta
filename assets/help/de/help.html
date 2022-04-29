@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8" /><meta name="viewport" content="initial-scale=1.0" /><link rel="stylesheet" href="../help.css" /></head><body><ul id="top">
+  <li><a href="#was-ist-delta-chat">Was ist LeOS-Delta?</a>
+    <ul>
+      <li><a href="#wie-finde-ich-leute-mit-denen-ich-chatten-kann">Wie finde ich Leute, mit denen ich chatten kann?</a></li>
+      <li><a href="#welche-vorteile-hat-delta-chat-gegenüber-anderen-messengern">Welche Vorteile hat LeOS-Delta gegenüber anderen Messengern?</a></li>
+      <li><a href="#welche-nachrichten-erscheinen-in-delta-chat">Welche Nachrichten erscheinen in LeOS-Delta?</a></li>
+      <li><a href="#unterstützt-delta-chat-bilder-videos-und-dateianhänge">Unterstützt LeOS-Delta Bilder, Videos und Dateianhänge?</a></li>
+      <li><a href="#wer-sieht-mein-profilbild">Wer sieht mein Profilbild?</a></li>
+      <li><a href="#unterstützt-delta-chat-html-e-mails">Unterstützt LeOS-Delta HTML-E-Mails?</a></li>
+      <li><a href="#weshalb-muss-ich-mein-e-mail-kennwort-in-delta-chat-eingeben-ist-das-sicher">Weshalb muss ich mein E-Mail-Kennwort in LeOS-Delta eingeben? Ist das sicher?</a></li>
+      <li><a href="#welche-app-berechtigungen-benötigt-delta-chat">Welche App-Berechtigungen benötigt LeOS-Delta?</a></li>
+    </ul>
+  </li>
+  <li><a href="#gruppen">Gruppen</a>
+    <ul>
+      <li><a href="#eine-gruppe-anlegen">Eine Gruppe anlegen</a></li>
+      <li><a href="#mitglieder-zu-einer-gruppe-hinzufügen">Mitglieder zu einer Gruppe hinzufügen</a></li>
+      <li><a href="#was-ist-eine-verifizierte-gruppe-weshalb-ist-das-experimentell">Was ist eine verifizierte Gruppe? Weshalb ist das experimentell?</a></li>
+      <li><a href="#ich-habe-mich-selbst-versehentlich-gelöscht">Ich habe mich selbst versehentlich gelöscht.</a></li>
+      <li><a href="#ich-möchte-keine-nachrichten-einer-gruppe-mehr-empfangen">Ich möchte keine Nachrichten einer Gruppe mehr empfangen.</a></li>
+      <li><a href="#was-bedeuten-die-häkchen-neben-den-ausgehenden-nachrichten">Was bedeuten die Häkchen neben den ausgehenden Nachrichten?</a></li>
+    </ul>
+  </li>
+  <li><a href="#encryption">Verschlüsselung</a>
+    <ul>
+      <li><a href="#unterstützt-delta-chat-eine-ende-zu-ende-verschlüsselung">Unterstützt LeOS-Delta eine Ende-zu-Ende-Verschlüsselung?</a></li>
+      <li><a href="#was-muss-ich-tun-um-die-ende-zu-ende-verschlüsselung-zu-aktivieren">Was muss ich tun, um die Ende-zu-Ende-Verschlüsselung zu aktivieren?</a></li>
+      <li><a href="#wird-ohne-ende-zu-ende-verschlüsselung-gar-nicht-verschlüsselt">Wird ohne Ende-zu-Ende-Verschlüsselung gar nicht verschlüsselt?</a></li>
+      <li><a href="#wie-kann-ich-den-kryptografischen-zustand-mit-einem-kontakt-überprüfen">Wie kann ich den kryptografischen Zustand mit einem Kontakt überprüfen?</a></li>
+      <li><a href="#wie-kann-ich-die-verschlüsselung-der-nachrichten-überprüfen">Wie kann ich die Verschlüsselung der Nachrichten überprüfen?</a></li>
+      <li><a href="#welches-verfahren-wird-für-die-ende-zu-ende-verschlüsselung-verwendet">Welches Verfahren wird für die Ende-zu-Ende-Verschlüsselung verwendet?</a></li>
+      <li><a href="#was-ist-der-unterschied-zwischen-verifizierten-gruppen-und-11-chats-mit-verifizierten-kontakten">Was ist der Unterschied zwischen verifizierten Gruppen und 1:1 Chats mit verifizierten Kontakten?</a></li>
+      <li><a href="#unterstützt-delta-chat-perfect-forward-secrecy">Unterstützt LeOS-Delta Perfect Forward Secrecy?</a></li>
+      <li><a href="#wie-schützt-delta-chat-meine-metadaten">Wie schützt LeOS-Delta meine Metadaten?</a></li>
+      <li><a href="#kann-ich-meinen-existierenden-privaten-schlüssel-weiter-verwenden">Kann ich meinen existierenden privaten Schlüssel weiter verwenden?</a></li>
+      <li><a href="#ich-kann-meinen-existierenden-pgp-schlüssel-nicht-in-delta-chat-importieren">Ich kann meinen existierenden PGP-Schlüssel nicht in LeOS-Delta importieren.</a></li>
+      <li><a href="#warum-verwendet-delta-chat-kein-pep-pretty-easy-privacy">Warum verwendet LeOS-Delta kein pEp (pretty easy privacy)?</a></li>
+    </ul>
+  </li>
+  <li><a href="#multiclient">Mehrere Geräte verwenden</a>
+    <ul>
+      <li><a href="#kann-ich-delta-chat-auf-mehreren-geräten-zur-selben-zeit-verwenden">Kann ich LeOS-Delta auf mehreren Geräten zur selben Zeit verwenden?</a></li>
+      <li><a href="#gibt-es-pläne-für-eine-delta-chat-web-anwendung">Gibt es Pläne für eine LeOS-Delta Web-Anwendung?</a></li>
+      <li><a href="#warum-kann-ich-posteingang-beobachten-ausschalten">Warum kann ich “Posteingang beobachten” ausschalten?</a></li>
+      <li><a href="#was-macht-die-option-kopie-an-mich-selbst-senden">Was macht die Option “Kopie an mich selbst senden”?</a></li>
+      <li><a href="#warum-gibt-es-die-funktion-gesendet-ordner-beobachten">Warum gibt es die Funktion “Gesendet-Ordner beobachten”?</a></li>
+      <li><a href="#warum-kann-ich-deltachat-ordner-beobachten-ausschalten">Warum kann ich “LeOS-Delta-Ordner beobachten” ausschalten?</a></li>
+    </ul>
+  </li>
+  <li><a href="#verschiedenes">Verschiedenes</a>
+    <ul>
+      <li><a href="#funktioniert-delta-chat-mit-meinem-e-mail-anbieter">Funktioniert LeOS-Delta mit <em>meinem</em> E-Mail-Anbieter?</a></li>
+      <li><a href="#delta-chat-verwendet-e-mail---ist-es-dann-wirklich-ein-instant-messenger">LeOS-Delta verwendet E-Mail - ist es dann wirklich ein <em>Instant</em> Messenger?</a></li>
+      <li><a href="#ist-delta-chat-kompatibel-mit-protonmail--tutanota--criptext">Ist LeOS-Delta kompatibel mit Protonmail / Tutanota / Criptext?</a></li>
+      <li><a href="#ich-bin-an-technischen-details-interessiert-gibt-es-hierzu-weitere-infos">Ich bin an technischen Details interessiert. Gibt es hierzu weitere Infos?</a></li>
+      <li><a href="#wie-wird-delta-chat-finanziert">Wie wird LeOS-Delta finanziert?</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+
+<h2 id="was-ist-delta-chat">
+        
+        
+          Was ist LeOS-Delta? <a href="#was-ist-delta-chat" class="anchor"></a>
+        
+        
+      </h2>
+
+<p>LeOS-Delta ist eine neue Chat-App, die mit Autocrypt verschlüsselte E-Mails versendet. 
+<strong>Sie müssen sich nirgendwo anmelden, verwenden Sie einfach Ihr bestehendes E-Mail-Konto mit LeOS-Delta.</strong></p>
+
+<p><img style="float:right; width:50%; max-width:360%; margin:1em;" src="../delta-what-optim.png" /></p>
+    
+      <h3 id="wie-finde-ich-leute-mit-denen-ich-chatten-kann">
+        
+        
+          Wie finde ich Leute, mit denen ich chatten kann? <a href="#wie-finde-ich-leute-mit-denen-ich-chatten-kann" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Mit LeOS-Delta können Sie an jede existierende E-Mail-Adresse schreiben. Im Gegensatz
+zu anderen Instant-Messengern muss der/die EmpfängerIn nicht LeOS-Delta installieren, um mit Ihnen zu kommunizieren. Er/sie kann einfach sein/ihr gewohntes Mailprogramm nutzen.</p>
+    
+      <h3 id="welche-vorteile-hat-delta-chat-gegenüber-anderen-messengern">
+        
+        
+          Welche Vorteile hat LeOS-Delta gegenüber anderen Messengern? <a href="#welche-vorteile-hat-delta-chat-gegenüber-anderen-messengern" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>LeOS-Delta ist <em>unabhängig</em> von Unternehmen oder Dienstleistungen. Ihre Daten gehören nur <em>Ihnen</em>.</li>
+  <li>Ihre Daten werden nicht auf einem zentralen Server gespeichert; im Gegensatz zu den meisten anderen Instant-Messengern schützt LeOS-Delta auf diese Weise sogar Ihre Metadaten.</li>
+  <li>Ihr Adressbuch wird nicht an Dritte übermittelt.</li>
+  <li><em>Schnell</em> durch die Verwendung von Push-IMAP.</li>
+  <li><em>Größte Nutzerbasis</em> - EmpfängerInnen, die LeOS-Delta <em>nicht</em> nutzen, können ebenfalls erreicht werden.</li>
+  <li><em>Elegante</em> und <em>einfache</em> Benutzeroberfläche.</li>
+  <li><em>Verteiltes</em> System.</li>
+  <li><em>Kein Spam</em> - standardmäßig werden nur Nachrichten bekannter Kontakte angezeigt.</li>
+  <li><em>Zuverlässig</em> - sicher für den professionellen Einsatz.</li>
+  <li><em>Vertrauenswürdig</em> - kann sogar für geschäftliche Nachrichten verwendet werden.</li>
+  <li>Auf <em>Copyleft</em> und <em>Standards</em> basierende freie Software.</li>
+</ul>
+    
+      <h3 id="welche-nachrichten-erscheinen-in-delta-chat">
+        
+        
+          Welche Nachrichten erscheinen in LeOS-Delta? <a href="#welche-nachrichten-erscheinen-in-delta-chat" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>LeOS-Delta zeigt automatisch:</p>
+
+<ul>
+  <li>Nachrichten von Kontakten aus Ihrem <strong>Adressbuch</strong></li>
+  <li>Nachrichten von Kontakten, <strong>die von Ihnen kontaktiert wurden</strong></li>
+  <li><strong>Antworten</strong> auf von Ihnen gesendete Nachrichten</li>
+</ul>
+
+<p>Andere Nachrichten werden nicht automatisch angezeigt; diese sind unter <strong>Kontaktanfragen</strong> zu finden. Wenn gewünscht, kann ein neuer Chat von dort gestartet werden.</p>
+    
+      <h3 id="unterstützt-delta-chat-bilder-videos-und-dateianhänge">
+        
+        
+          Unterstützt LeOS-Delta Bilder, Videos und Dateianhänge? <a href="#unterstützt-delta-chat-bilder-videos-und-dateianhänge" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Ja. Alle E-Mail-Anhänge werden als separate Nachrichten angezeigt. Ausgehende Nachrichten erhalten bei Bedarf automatisch Anhänge.</li>
+</ul>
+    
+      <h3 id="wer-sieht-mein-profilbild">
+        
+        
+          Wer sieht mein Profilbild? <a href="#wer-sieht-mein-profilbild" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Sie können ein Profilbild in den Einstellungen hinzufügen. Wenn Sie Ihren Kontakten eine Nachricht senden oder sie über einen QR-Code hinzufügen, sehen diese automatisch Ihr Profilbild.</p>
+  </li>
+  <li>
+    <p>Kontakte, die LeOS-Delta nicht nutzen, sehen das Profilbild nicht (aber natürlich können sie LeOS-Delta installieren :)</p>
+  </li>
+  <li>
+    <p>Aus Datenschutzgründen sieht niemand Ihr Profilbild, dem Sie nicht zuvor eine Nachricht gesendet haben.</p>
+  </li>
+  <li>
+    <p>Ihr Profilbild wird nicht mit jeder Nachricht gesendet, aber häufig genug, so dass Ihre Kontakte es auch dann erhalten, wenn diese ein neues Gerät nutzen.</p>
+  </li>
+</ul>
+    
+      <h3 id="unterstützt-delta-chat-html-e-mails">
+        
+        
+          Unterstützt LeOS-Delta HTML-E-Mails? <a href="#unterstützt-delta-chat-html-e-mails" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Ja. Eingehende Nachrichten erhalten bei Bedarf eine Schaltfläche “Vollständige Nachricht anzeigen”. Ausgehende E-Mails verwenden immer “Nur Text”.</li>
+</ul>
+    
+      <h3 id="weshalb-muss-ich-mein-e-mail-kennwort-in-delta-chat-eingeben-ist-das-sicher">
+        
+        
+          Weshalb muss ich mein E-Mail-Kennwort in LeOS-Delta eingeben? Ist das sicher? <a href="#weshalb-muss-ich-mein-e-mail-kennwort-in-delta-chat-eingeben-ist-das-sicher" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Genau wie auch bei anderen E-Mail-Programmen (z. B. Thunderbird, K9-Mail oder Outlook) benötigt LeOS-Delta das Passwort, um E-Mails versenden zu können. Das Passwort wird nur auf Ihrem Gerät gespeichert und bei der Anmeldung an Ihren E-Mail-Anbieter gesendet.</p>
+
+<p>Wenn Sie einen E-Mail-Anbieter wie gmail.com oder yandex.ru nutzen, der OAuth2 unterstützt, wird Ihr Passwort nicht auf Ihrem Gerät gespeichert. In diesem Fall wird nur ein Zugriffstoken genutzt.</p>
+
+<p>Da LeOS-Delta Open Source ist, können Sie den <a href="https://github.com/deltachat/deltachat-core-rust/blob/master/src/login_param.rs">Quellcode</a> einsehen und sich davon überzeugen, dass Ihre Zugangsdaten sicher gehandhabt werden. Wir freuen uns über Feedback, das unsere App sicherer für all unsere NutzerInnen macht.</p>
+    
+      <h3 id="welche-app-berechtigungen-benötigt-delta-chat">
+        
+        
+          Welche App-Berechtigungen benötigt LeOS-Delta? <a href="#welche-app-berechtigungen-benötigt-delta-chat" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Je nach verwendetem Betriebssystem werden Sie möglicherweise aufgefordert, der App Berechtigungen zu erteilen. Diese werden wie folgt verwendet:</p>
+
+<ul>
+  <li>Kamera <em>(kann verweigert werden)</em>
+    <ul>
+      <li>Bilder und Videos aufnehmen: Um Fotos zu senden</li>
+    </ul>
+  </li>
+  <li>Kontakte <em>(kann verweigert werden)</em>
+    <ul>
+      <li>Kontakte lesen: Um Kontakte zum Chatten zu finden</li>
+    </ul>
+  </li>
+  <li>Standort <em>(kann verweigert werden)</em>
+    <ul>
+      <li>Auf den ungefähren Standort zugreifen (netzwerkbasiert): Für die Standortübertragungsfunktion</li>
+      <li>Auf genauen Standort zugreifen (GPS- und netzwerkbasiert): Für die Standortübertragungsfunktion</li>
+    </ul>
+  </li>
+  <li>Mikrofon <em>(kann verweigert werden)</em>
+    <ul>
+      <li>Audio aufnehmen: Für Sprachnachrichten</li>
+    </ul>
+  </li>
+  <li>Speicher <em>(kann verweigert werden)</em>
+    <ul>
+      <li>SD-Karteninhalte ändern oder löschen: Um Nachrichtenanhänge herunterzuladen</li>
+      <li>SD-Karteninhalte lesen: Um Dateien mit Ihren Kontakten zu teilen</li>
+    </ul>
+  </li>
+  <li>Andere Berechtigungen:
+    <ul>
+      <li>Audio-Einstellungen ändern: Um Klingeltöne und die Lautstärke für Benachrichtigungen und Audionachrichten zu wählen</li>
+      <li>Beim Start ausführen: Um LeOS-Delta nicht manuell starten zu müssen</li>
+      <li>Vibrationsalarm steuern: Für Benachrichtigungen</li>
+      <li>Netzwerkverbindungen abrufen: Um eine Verbindung zu Ihrem E-Mail-Anbieter herzustellen</li>
+      <li>Ruhezustand deaktivieren: Um den Sicherheitscode während der Autocrypt-Setupnachricht einfacher abtippen zu können</li>
+      <li>Auf alle Netzwerke zugreifen: Um eine Verbindung zu Ihrem E-Mail-Anbieter herzustellen</li>
+      <li>WLAN-Verbindungen abrufen: Um eine Verbindung zu Ihrem E-Mail-Anbieter herzustellen</li>
+      <li>Fragen, ob Akku-Leistungsoptimierungen ignoriert werden können: Für NutzerInnen, die permanent Nachrichten empfangen möchten</li>
+    </ul>
+  </li>
+</ul>
+    
+      <h2 id="gruppen">
+        
+        
+          Gruppen <a href="#gruppen" class="anchor"></a>
+        
+        
+      </h2>
+    
+      <h3 id="eine-gruppe-anlegen">
+        
+        
+          Eine Gruppe anlegen <a href="#eine-gruppe-anlegen" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Wählen Sie <strong>Neuer Chat</strong> und dann <strong>Neue Gruppe</strong> aus dem Menü oben rechts oder über das entsprechende Symbol unter Android/iOS.</li>
+  <li>Wählen Sie auf dem folgenden Bildschirm die <strong>Gruppenmitglieder</strong> aus und klicken Sie auf das Häkchen in der oberen rechten Ecke. Danach können Sie einen <strong>Gruppennamen</strong> und auch einen <strong>Gruppenbild</strong>  festlegen.</li>
+  <li>Sobald Sie die <strong>erste Nachricht</strong> in die Gruppe schreiben, werden alle Mitglieder über die neue Gruppe informiert und können in der Gruppe antworten (solange Sie keine Nachricht in die Gruppe schreiben, ist die Gruppe für die Gruppenmitglieder nicht sichtbar).</li>
+</ul>
+    
+      <h3 id="mitglieder-zu-einer-gruppe-hinzufügen">
+        
+        
+          Mitglieder zu einer Gruppe hinzufügen <a href="#mitglieder-zu-einer-gruppe-hinzufügen" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Alle Gruppenmitglieder haben <strong>die gleichen Rechte</strong>. Jede/r kann daher Mitglieder löschen oder weitere hinzufügen.</li>
+  <li>Um die Mitglieder zu verwalten, einfach in der Gruppe auf den Gruppennamen klicken.</li>
+</ul>
+    
+      <h3 id="was-ist-eine-verifizierte-gruppe-weshalb-ist-das-experimentell">
+        
+        
+          Was ist eine verifizierte Gruppe? Weshalb ist das experimentell? <a href="#was-ist-eine-verifizierte-gruppe-weshalb-ist-das-experimentell" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Eine verifizierte Gruppe ist ein Chat, der Sicherheit vor einem aktiven Angreifer garantiert. Alle Nachrichten in einer verifizierten Gruppe sind Ende-zu-Ende verschlüsselt und Gruppenmitglieder können durch Scannen eines “QR-Einladungscodes” beitreten. Alle Gruppenmitglieder sind deshalb durch eine Kette von Einladungen miteinander verbunden, welche kryptografische Konsistenz gegen aktive Netzwerk- oder Anbieterangriffe garantiert.
+Siehe <a href="https://countermitm.readthedocs.io/en/latest/new.html">countermitm.readthedocs.io</a> für  Forschung und Entwicklung hinter dieser Funktion.</p>
+  </li>
+  <li>
+    <p>Seit Dezember 2019 gibt es “verifizierte Gruppe” als experimentelles Feature.
+Es wird kontinuierlich verbessert und viele Fehler wurden seit der ursprünglichen Einführung in 2018 behoben. Allerdings gibt es immer noch Fälle, besonders in großen Gruppen, bei denen es zu Inkonsistenzen kommen kann oder Nachrichten unleserlich werden. Anfang 2020 wird es eine Sicherheitsüberprüfung geben und es finden einige neue Entwicklungen rund um QR-Beitrittsprotokolle statt. Die Chancen, dass wir das Etikett “experimentell” in nicht all zu ferner Zukunft entfernen können, stehen gut.</p>
+  </li>
+</ul>
+    
+      <h3 id="ich-habe-mich-selbst-versehentlich-gelöscht">
+        
+        
+          Ich habe mich selbst versehentlich gelöscht. <a href="#ich-habe-mich-selbst-versehentlich-gelöscht" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Da Sie kein Gruppenmitglied mehr sind, können Sie sich selbst nicht mehr hinzufügen.
+Kein Problem, bitten Sie einfach ein anderes Gruppenmitglied in einem normalen Chat, Sie erneut hinzuzufügen.</li>
+</ul>
+    
+      <h3 id="ich-möchte-keine-nachrichten-einer-gruppe-mehr-empfangen">
+        
+        
+          Ich möchte keine Nachrichten einer Gruppe mehr empfangen. <a href="#ich-möchte-keine-nachrichten-einer-gruppe-mehr-empfangen" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Löschen Sie sich entweder aus der Mitgliederliste oder löschen Sie den gesamten Chat. 
+Wenn Sie der Gruppe später erneut beitreten möchten, bitten Sie ein anderes Gruppenmitglied, Sie erneut hinzuzufügen.</p>
+  </li>
+  <li>
+    <p>Alternativ können Sie eine Gruppe auch “stummschalten” - dies bedeutet, dass Sie weiterhin alle Nachrichten erhalten und neue schreiben können, aber nicht mehr über neue Nachrichten informiert werden.</p>
+  </li>
+</ul>
+    
+      <h3 id="was-bedeuten-die-häkchen-neben-den-ausgehenden-nachrichten">
+        
+        
+          Was bedeuten die Häkchen neben den ausgehenden Nachrichten? <a href="#was-bedeuten-die-häkchen-neben-den-ausgehenden-nachrichten" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li><strong>Ein Häkchen</strong> bedeutet, dass die Nachricht erfolgreich versandt wurde.</li>
+  <li><strong>Zwei Häkchen</strong> bedeuten, dass mindestens ein Gerät des Empfängers zurückgemeldet hat, die Nachricht empfangen zu haben.</li>
+  <li>Lesebestätigungen können deaktiviert werden. D.h. auch wenn Sie nur ein Häkchen sehen, kann die Nachricht gelesen worden sein.</li>
+  <li>Umgekehrt bedeuten zwei Häkchen nicht automatisch, dass ein Mensch die Nachricht gelesen oder verstanden hat ;)</li>
+</ul>
+    
+      <h2 id="encryption">
+        
+        
+          Verschlüsselung <a href="#encryption" class="anchor"></a>
+        
+        
+      </h2>
+    
+      <h3 id="unterstützt-delta-chat-eine-ende-zu-ende-verschlüsselung">
+        
+        
+          Unterstützt LeOS-Delta eine Ende-zu-Ende-Verschlüsselung? <a href="#unterstützt-delta-chat-eine-ende-zu-ende-verschlüsselung" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Ja. LeOS-Delta implementiert den Autocrypt Level 1-Standard und kann 
+daher Ende-zu-Ende verschlüsselte Nachrichten mit anderen Autocrypt-fähigen Anwendungen austauschen.</p>
+  </li>
+  <li>
+    <p>Darüber hinaus unterstützt LeOS-Delta eine weitere Form der Ende-zu-Ende-Verschlüsselung, die sogar gegen aktive Angriffe schützt, siehe “Verifizierte Gruppen”.</p>
+  </li>
+</ul>
+    
+      <h3 id="was-muss-ich-tun-um-die-ende-zu-ende-verschlüsselung-zu-aktivieren">
+        
+        
+          Was muss ich tun, um die Ende-zu-Ende-Verschlüsselung zu aktivieren? <a href="#was-muss-ich-tun-um-die-ende-zu-ende-verschlüsselung-zu-aktivieren" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Nichts.</p>
+  </li>
+  <li>
+    <p>LeOS-Delta (und andere <a href="https://autocrypt.org">Autocrypt</a>-kompatible
+E-Mail-Anwendungen) tauschen die für eine Ende-zu-Ende-Verschlüsselung benötigten Schlüssel automatisch mit der ersten versendeten Nachricht aus. Danach werden alle folgenden Nachrichten automatisch Ende-zu-Ende verschlüsselt.
+Wenn einer der Chat-Kontakte eine E-Mail-Anwendung verwendet, die nicht Autocrypt-kompatibel ist, werden Nachrichten so lange unverschlüsselt gesendet, bis wieder eine Autocrypt-kompatible Anwendung verfügbar ist.</p>
+  </li>
+  <li>
+    <p>Wenn Sie als Standardeinstellung keine Ende-zu-Ende-Verschüsselung verwenden möchten, können Sie dies unter “Einstellungen” bzw. “Erweiterte Einstellungen” festlegen.</p>
+  </li>
+</ul>
+    
+      <h3 id="wird-ohne-ende-zu-ende-verschlüsselung-gar-nicht-verschlüsselt">
+        
+        
+          Wird ohne Ende-zu-Ende-Verschlüsselung gar nicht verschlüsselt? <a href="#wird-ohne-ende-zu-ende-verschlüsselung-gar-nicht-verschlüsselt" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Mit den meisten E-Mail-Servern stellt LeOS-Delta eine <em>transportverschlüsselte</em> Verbindung her (<a href="https://de.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>).
+Diese schützt nur die Verbindung zwischen Ihrem Gerät und Ihrem E-Mail-Server. Wohingegen Ende-zu-Ende-Verschlüsselung die gesamte Kommunikation zwischen Ihrem Gerät und dem Fremdgerät schützt.</li>
+</ul>
+    
+      <h3 id="wie-kann-ich-den-kryptografischen-zustand-mit-einem-kontakt-überprüfen">
+        
+        
+          Wie kann ich den kryptografischen Zustand mit einem Kontakt überprüfen? <a href="#wie-kann-ich-den-kryptografischen-zustand-mit-einem-kontakt-überprüfen" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Wenn Sie Ihren Gesprächspartner persönlich treffen:</p>
+
+<ul>
+  <li>Tippen Sie auf <strong>QR-Einladungscode</strong> auf dem einen Gerät und dann <strong>QR-Code scannen</strong> auf dem anderen Gerät und scannen Sie den Code. Wenn beide Geräte online sind, 
+wird (falls er noch nicht existiert) ein Chat-Kanal eingerichtet und die Schlüssel für die Verschlüsselung werden überprüft. Beide Kontakte erhalten eine “Absender verifiziert” Systemnachricht in ihrem 1:1 Chat.</li>
+</ul>
+
+<p>Wenn Sie Ihren Gesprächspartner nicht persönlich treffen können, können Sie den Status manuell im Dialog “Verschlüsselungsinfo” überprüfen
+(siehe Benutzerprofil auf Android/iOS bzw. Rechts-Klick auf einen Benutzerchat, wenn Sie eine Desktop-App verwenden):</p>
+
+<ul>
+  <li>
+    <p>Für die Ende-zu-Ende-Verschlüsselung zeigt LeOS-Delta dort zwei Fingerabdrücke an.  Wenn auf dem Gerät Ihres Chatkontakts dieselben Fingerabdrücke angezeigt werden, ist die Verbindung sicher.</p>
+  </li>
+  <li>
+    <p>Bei der Transportverschlüsselung wird dieser Zustand dort nur angezeigt.</p>
+  </li>
+</ul>
+    
+      <h3 id="wie-kann-ich-die-verschlüsselung-der-nachrichten-überprüfen">
+        
+        
+          Wie kann ich die Verschlüsselung der Nachrichten überprüfen? <a href="#wie-kann-ich-die-verschlüsselung-der-nachrichten-überprüfen" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Wenn neben einer Nachricht ein kleines <strong>Vorhängeschloss</strong> angezeigt wird, bedeutet dies, dass die Nachricht durchgehend Ende-zu-Ende verschlüsselt ist <em>und</em> vom angegebenen Kontakt gesendet wurde.</p>
+  </li>
+  <li>
+    <p>Wenn <strong>kein Vorhängeschloss</strong> vorhanden ist, wird die Nachricht normalerweise unverschlüsselt transportiert, z.B. weil der/die AbsenderIn oder Sie die Ende-zu-Ende-Verschlüsselung deaktiviert haben oder der/die AbsenderIn eine Anwendung nutzt, die keine Ende-zu-Ende-Verschlüsselung unterstützt.</p>
+  </li>
+</ul>
+    
+      <h3 id="welches-verfahren-wird-für-die-ende-zu-ende-verschlüsselung-verwendet">
+        
+        
+          Welches Verfahren wird für die Ende-zu-Ende-Verschlüsselung verwendet? <a href="#welches-verfahren-wird-für-die-ende-zu-ende-verschlüsselung-verwendet" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p><a href="https://autocrypt.org">Autocrypt</a> wird verwendet, um eine Ende-zu-Ende-Verschüsselung mit anderen LeOS-Delta- oder anderen Autocrypt-kompatiblen Apps aufzubauen.
+Autocrypt verwendet eine begrenzte Teilmenge des OpenPGP-Standards.</p>
+  </li>
+  <li>
+    <p>Um vor aktiven Netzwerkangriffen zu schützen, implementiert LeOS-Delta <a href="https://countermitm.readthedocs.io/en/latest/new.html">countermitm Kontakt-Setup- und Verifizierte-Gruppen-Protokolle</a>. Dies geht über den Basisschutz der Verschlüsselung von Autocrypt Level 1 hinaus, behält aber dessen Einfachheit bei.</p>
+  </li>
+</ul>
+    
+      <h3 id="was-ist-der-unterschied-zwischen-verifizierten-gruppen-und-11-chats-mit-verifizierten-kontakten">
+        
+        
+          Was ist der Unterschied zwischen verifizierten Gruppen und 1:1 Chats mit verifizierten Kontakten? <a href="#was-ist-der-unterschied-zwischen-verifizierten-gruppen-und-11-chats-mit-verifizierten-kontakten" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>1:1 Chats mit einem verifizierten Kontakt und verifizierte Gruppen sind nicht das Gleiche, auch wenn sich nur 2 Personen in einer verifizierten Gruppe befinden. Ein Unterschied ist, dass Sie zu einer Gruppe einfach weitere Personen hinzufügen können, aber es gibt noch weitere Unterschiede.</p>
+  </li>
+  <li>
+    <p>Verifizierte Gruppen sind immer geschützt. Jeder Bruch (Klartextnachrichten oder falsch signierte Nachrichten) wird erkannt und nicht in diesem Chat dargestellt.
+Sie können darauf vertrauen, dass alle Nachrichten in diesem verifizierten Chat nicht von Dritten verändert oder gelesen wurden.</p>
+  </li>
+  <li>
+    <p>In 1:1 Chats wird, wenn möglich, Ende-zu-Ende verschlüsselt. Aber auch wenn eine Verschlüsselung nicht möglich ist, werden die Nachrichten versandt, damit NutzerInnen auch dann miteinander kommunizieren, wenn sie ihre E-Mail-Programme, Einstellungen oder Geräte gewechselt haben. Deshalb sehen Sie in diesen Chats kein Verifikationshäkchen, auch wenn Sie den Kontakt verifiziert haben.</p>
+  </li>
+</ul>
+    
+      <h3 id="unterstützt-delta-chat-perfect-forward-secrecy">
+        
+        
+          Unterstützt LeOS-Delta Perfect Forward Secrecy? <a href="#unterstützt-delta-chat-perfect-forward-secrecy" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Nein, u.a., da OpenPGP Perfect Forward Secrecy nicht unterstützt. Perfect Forward Secrecy arbeitet sitzungsorientiert, aber E-Mail ist von Natur aus asynchron und wird oft von verschiedenen Geräten aus verwendet.
+Wenn Ihr geheimer Schlüssel aus LeOS-Delta Dritten bekannt wird und jemand eine Aufzeichnung Ihrer versendeten und empfangenen verschlüsselten Nachrichten besitzt, ist dieser in der Lage, die Nachrichten zu lesen.</p>
+  </li>
+  <li>
+    <p>Beachten Sie, dass, falls Ihr Telefon beschlagnahmt oder gehackt wird, alle Nachrichten gelesen werden können, unabhängig davon, ob Perfect Forward Secrecy verwendet wird oder nicht.
+Der Zugriff auf ein einzelnes Gerät eines Gruppenmitglieds verrät viel über den sozialen Graphen. Verwendet man E-Mail-Adressen, die sich nicht einfach auf Personen zurückverfolgen lassen, hilft das den Gruppenmitgliedern, sich vor den Folgen der Beschlagnahmung eines Gerätes zu schützen.</p>
+  </li>
+  <li>
+    <p>Wir zeigen Wege auf, wie man im Falle einer Beschlagnahme eines Gerätes die Kommunikationen besser schützen kann.</p>
+  </li>
+</ul>
+    
+      <h3 id="wie-schützt-delta-chat-meine-metadaten">
+        
+        
+          Wie schützt LeOS-Delta meine Metadaten? <a href="#wie-schützt-delta-chat-meine-metadaten" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Da LeOS-Delta ein dezentraler Messenger ist, werden Metadaten nicht auf einem zentralen Server gespeichert. Allerdings werden diese auf den Mailservern des/der AbsenderIn und des/der EmpfängerIn einer Nachricht gespeichert.</p>
+  </li>
+  <li>
+    <p>Jeder Mailserver kann derzeit über die unverschlüsselten An- und CC-Felder herausfinden, wer eine Nachricht an wen gesendet hat und welche E-Mail-Adressen Teil einer Gruppe sind. LeOS-Delta selbst kann unverschlüsselte An- und CC-Felder vollständig vermeiden und schreibt diese immer nur in den verschlüsselten Teil einer Nachricht. Lesen Sie dazu auch  <a href="https://github.com/deltachat/deltachat-core-rust/issues/1032">Avoid sending To/CC headers for verified groups</a>.
+Bei normalen 1:1 Chats ist das Hauptproblem, wie andere Mail-Programme, die womöglich Teil der Chatkommunikation sind, hiermit umgehen.</p>
+  </li>
+  <li>
+    <p>Viele weitere E-Mail-Header, insbesondere der “Betreff”-Header, sind Ende-zu-Ende verschlüsselt. Lesen Sie dazu auch  <a href="https://datatracker.ietf.org/doc/draft-autocrypt-lamps-protected-headers/">IETF RFC</a>.</p>
+  </li>
+</ul>
+    
+      <h3 id="kann-ich-meinen-existierenden-privaten-schlüssel-weiter-verwenden">
+        
+        
+          Kann ich meinen existierenden privaten Schlüssel weiter verwenden? <a href="#kann-ich-meinen-existierenden-privaten-schlüssel-weiter-verwenden" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Ja. Der beste Weg ist, von der anderen E-Mail-Anwendung aus eine <em>Autocrypt Setup-Nachricht</em> zu versenden. Suchen Sie eine solche Option in den Einstellungen der anderen Anwendung, z.B. unter “Autocrypt Setup Transfer starten”, und folgen Sie den dort angezeigten Hinweisen.</p>
+  </li>
+  <li>
+    <p>Alternativ können Sie den Schlüssel manuell unter “Einstellungen” bzw. “Erweiterte Einstellungen” und dann “Importiere geheime Schlüssel” importieren. 
+Achtung: Der private Schlüssel darf <em>nicht</em> mit einem Passwort geschützt sein bzw. dieses muss zuvor entfernt werden.</p>
+  </li>
+  <li>
+    <p>Wenn Sie keinen Schlüssel besitzen oder nicht einmal wissen, dass Sie einen benötigen - keine Sorge: LeOS-Delta erstellt einen Schlüssel, wenn er benötigt wird. Sie müssen nichts weiter tun.</p>
+  </li>
+</ul>
+    
+      <h3 id="ich-kann-meinen-existierenden-pgp-schlüssel-nicht-in-delta-chat-importieren">
+        
+        
+          Ich kann meinen existierenden PGP-Schlüssel nicht in LeOS-Delta importieren. <a href="#ich-kann-meinen-existierenden-pgp-schlüssel-nicht-in-delta-chat-importieren" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>
+    <p>Wahrscheinlich ist Ihr Schlüssel verschlüsselt und/oder mit einem Passwort geschützt. Solche Schlüssel werden von LeOS-Delta nicht unterstützt. Bitte entfernen Sie die Verschlüsselung und das Passwort und versuchen Sie den Import danach erneut.
+Wenn Sie das Passwort nicht entfernen möchten, müssen Sie einen E-Mail-Alias zur Nutzung mit LeOS-Delta anlegen, sodass der Schlüssel von LeOS-Delta mit diesem E-Mail-Alias verknüpft ist.</p>
+  </li>
+  <li>
+    <p>LeOS-Delta unterstützt “gängige” private Schlüsselformate, allerdings ist es unwahrscheinlich, dass wir 100% aller privaten Schlüssel aus sämtlichen Quellen unterstützen. 
+Dies ist auch nicht das Hauptaugenmerk von LeOS-Delta (tatsächlich besitzt die große Mehrheit der LeOS-Delta NutzerInnen keinen Schlüssel, bevor sie LeOS-Delta verwendet). 
+Wir versuchen jedoch, private Schlüssel aus anderen Quellen so gut wie möglich zu unterstützen.</p>
+  </li>
+  <li>
+    <p>Das Entfernen des Passworts vom privaten Schlüssel ist abhängig von der Software, mit der Sie Ihre PGP-Schlüssel verwalten. 
+Bei Enigmail können Sie Ihr Passwort im Fenster Schlüsselverwaltung auf einen leeren Wert setzen.
+Bei GnuPG können Sie es über die <a href="https://github.com/deltachat/deltachat-android/issues/98#issuecomment-378383429">Kommandozeile einstellen</a>.
+Für andere Programme können Sie online eine Lösung finden.</p>
+  </li>
+</ul>
+    
+      <h3 id="warum-verwendet-delta-chat-kein-pep-pretty-easy-privacy">
+        
+        
+          Warum verwendet LeOS-Delta kein pEp (pretty easy privacy)? <a href="#warum-verwendet-delta-chat-kein-pep-pretty-easy-privacy" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>LeOS-Delta verwendet den Autocrypt Ende-zu-Ende-Verschlüsselungsstandard. Lesen Sie die <a href="https://autocrypt.org/faq.html#how-does-autocrypt-differ-from-pep">Autocrypt  FAQ</a> für eine Unterscheidung zwischen Autocrypt und pEp.</li>
+</ul>
+    
+      <h2 id="multiclient">
+        
+        
+          Mehrere Geräte verwenden <a href="#multiclient" class="anchor"></a>
+        
+        
+      </h2>
+    
+      <h3 id="kann-ich-delta-chat-auf-mehreren-geräten-zur-selben-zeit-verwenden">
+        
+        
+          Kann ich LeOS-Delta auf mehreren Geräten zur selben Zeit verwenden? <a href="#kann-ich-delta-chat-auf-mehreren-geräten-zur-selben-zeit-verwenden" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Möchten Sie einen Account auf verschiedenen Geräten nutzen, müssen Sie in LeOS-Delta auf dem “alten” Gerät ein Backup erstellen und dieses auf dem neuen Gerät importieren:</p>
+
+<ul>
+  <li>Wählen Sie auf dem alten Gerät “Einstellungen” bzw. “Einstellungen / Chats und Medien” und danach “Backup”. Geben Sie Ihr(e) Entsperrungs-PIN, -Muster oder -Passwort ein. Klicken Sie dann auf “Backup starten”. Die Backup-Datei wird auf Ihrem Gerät gespeichert. Nun übertragen Sie die Datei auf Ihr neues Gerät.</li>
+  <li>Rufen Sie auf Ihrem neuen Gerät LeOS-Delta auf und wählen Sie nun auf dem Startbildschirm “Backup importieren”, anstatt sich mit Ihrer E-Mail-Adresse einzuloggen. Ihre Chat-Konversationen, Schlüssel und Medien werden nun auf das neue Gerät kopiert.</li>
+  <li>Die Geräte sind nun synchronisiert und Sie können beide für das Senden und Empfangen von Ende-zu-Ende verschlüsselten Nachrichten mit Ihren Chat-Kontakten nutzen.</li>
+</ul>
+    
+      <h3 id="gibt-es-pläne-für-eine-delta-chat-web-anwendung">
+        
+        
+          Gibt es Pläne für eine LeOS-Delta Web-Anwendung? <a href="#gibt-es-pläne-für-eine-delta-chat-web-anwendung" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Es gibt keine direkten Pläne, aber einige vorläufige Gedanken.</li>
+  <li>Es gibt 2-3 Möglichkeiten, einen LeOS-Delta Web-Client einzuführen, aber sie bedeuten alle immense Arbeit. Im Moment fokussieren wir uns darauf, stabile native Apps in den Appstores (Google Play/iOS/Windows/macOS/Linux repositories) anzubieten.</li>
+  <li>Sollten Sie einen Web-Client benötigen, weil Sie auf Ihrem Arbeitsrechner keine Software installieren dürfen, können Sie den Windows Desktop-Client bzw. Applmage für Linux nutzen. Sie finden diese unter <a href="https://get.delta.chat">get.delta.chat</a>.</li>
+</ul>
+    
+      <h3 id="warum-kann-ich-posteingang-beobachten-ausschalten">
+        
+        
+          Warum kann ich “Posteingang beobachten” ausschalten? <a href="#warum-kann-ich-posteingang-beobachten-ausschalten" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Dies ist eine experimentelle Einstellung für BenutzerInnen, die serverseitige Regeln verwenden möchten. Dies wird nicht von allen Providern unterstützt, aber bei einigen können Sie Nachrichten mit einem “Chat-Version”-Header vom Server in den LeOS-Delta-Ordner verschieben. Normalerweise wird dies von der LeOS-Delta-App erledigt.</p>
+
+<p>“Posteingang beobachten” auszuschalten ist sinnvoll, wenn die folgenden beiden Punkte erfüllt sind:</p>
+
+<ul>
+  <li>es existiert eine serverseitige Regel, Nachrichten mit einem Chat-Version-Header in den LeOS-Delta-Ordner zu kopieren</li>
+  <li>“Normale E-Mails anzeigen” ist auf “Nein, nur Chats” gesetzt</li>
+</ul>
+
+<p>In diesem Fall muss LeOS-Delta den Posteingang nicht beobachten.</p>
+    
+      <h3 id="was-macht-die-option-kopie-an-mich-selbst-senden">
+        
+        
+          Was macht die Option “Kopie an mich selbst senden”? <a href="#was-macht-die-option-kopie-an-mich-selbst-senden" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Das Senden einer Kopie an Sie selbst stellt sicher, dass Sie Ihre eigenen Nachrichten auf all Ihren Geräten sehen. Wenn Sie mehrere Geräte nutzen, aber diese Option nicht eingeschaltet ist, sehen Sie nur die Nachrichten, die andere Ihnen geschickt haben, und die ausgehenden Nachrichten, die auf dem Gerät selbst verschickt wurden.</p>
+
+<p>Die Kopie wird dabei an den Posteingang verschickt und von dort in den LeOS-Delta-Ordner verschoben. LeOS-Delta lädt <em>niemals</em> etwas in den Gesendet-Ordner hoch, weil dies bedeuten würde, dass eine Nachricht zweimal hochgeladen werden müsste (einmal durch SMTP und dann durch IMAP in den Gesendet-Ordner).</p>
+
+<p>Die Standardeinstellung für “Kopie an mich selbst senden” ist “Aus”.</p>
+    
+      <h3 id="warum-gibt-es-die-funktion-gesendet-ordner-beobachten">
+        
+        
+          Warum gibt es die Funktion “Gesendet-Ordner beobachten”? <a href="#warum-gibt-es-die-funktion-gesendet-ordner-beobachten" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Der einzige Grund, den Gesendet-Ordner zu beobachten, ist, wenn Sie ein weiteres E-Mail-Programm (wie Thunderbird) mit demselben E-Mail-Account verwenden und die von dort versendeten Nachrichten in der Chat-Historie aufgeführt werden sollen.</p>
+
+<p>Wir empfehlen für diesen Zweck aber “LeOS-Delta Desktop”; Sie können die App unter <a href="https://get.delta.chat">get.delta.chat</a> herunterladen. Möglicherweise wird die Option “Gesendet-Ordner beobachten” zukünftig wegfallen; sie kommt aus einer Zeit, als LeOS-Delta Desktop noch nicht auf allen Plattformen zur Verfügung stand.</p>
+    
+      <h3 id="warum-kann-ich-deltachat-ordner-beobachten-ausschalten">
+        
+        
+          Warum kann ich “LeOS-Delta-Ordner beobachten” ausschalten? <a href="#warum-kann-ich-deltachat-ordner-beobachten-ausschalten" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>Einige BenutzerInnen verwenden LeOS-Delta als reguläres E-Mail-Programm und möchten lieber den Posteingang anstatt des LeOS-Delta-Ordners verwenden. Wenn Sie “LeOS-Delta-Ordner beobachten” ausschalten, sollten Sie auch “Autom. Verschieben in den LeOS-Delta-Ordner” ausschalten. Andernfalls funktioniert die Verwendung auf mehreren Geräten möglicherweise nicht richtig.</p>
+    
+      <h2 id="verschiedenes">
+        
+        
+          Verschiedenes <a href="#verschiedenes" class="anchor"></a>
+        
+        
+      </h2>
+    
+      <h3 id="funktioniert-delta-chat-mit-meinem-e-mail-anbieter">
+        
+        
+          Funktioniert LeOS-Delta mit <em>meinem</em> E-Mail-Anbieter? <a href="#funktioniert-delta-chat-mit-meinem-e-mail-anbieter" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Mit ziemlich hoher Wahrscheinlichkeit: Ja :) 
+Allerdings benötigen einige Anbieter besondere Einstellungen, um ordnungsgemäß zu funktionieren; eine von NutzerInnen erstellte Sammlung zu einigen Optionen findet sich unter <a href="https://providers.delta.chat">Provider Overview</a>.</li>
+</ul>
+    
+      <h3 id="delta-chat-verwendet-e-mail---ist-es-dann-wirklich-ein-instant-messenger">
+        
+        
+          LeOS-Delta verwendet E-Mail - ist es dann wirklich ein <em>Instant</em> Messenger? <a href="#delta-chat-verwendet-e-mail---ist-es-dann-wirklich-ein-instant-messenger" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Typischerweise benötigt das Senden und Empfangen von Nachrichten nur wenige Sekunden. Es gibt Fälle, in denen es länger dauert, aber das trifft auch auf andere Messenger zu.</li>
+  <li>Das Chatten geht schnell, wenn beide Seiten die App aktiv verwenden. Wenn die App im Hintergrund läuft, kann es zu Verzögerungen kommen.</li>
+  <li>Das Empfangen von Nachrichten im Hintergrund kann deshalb manchmal Minuten dauern, weil Android und iOS LeOS-Delta daran hindert, im Hintergrund zu laufen, und die App so nur gelegentlich aktiv ist. Diese künstliche Verzögerung ist eher unter iOS zu spüren als unter Android.</li>
+  <li>Dass Android und iOS Apps, die im Hintergrund laufen, beenden, ist allerdings ein Problem, das viele legitime Apps haben. Für weitere Informationen siehe <a href="https://dontkillmyapp.com/">dontkillmyapp.com</a>.</li>
+</ul>
+    
+      <h3 id="ist-delta-chat-kompatibel-mit-protonmail--tutanota--criptext">
+        
+        
+          Ist LeOS-Delta kompatibel mit Protonmail / Tutanota / Criptext? <a href="#ist-delta-chat-kompatibel-mit-protonmail--tutanota--criptext" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Yes and No.</li>
+  <li>No, you can not use your Protonmail, Tutanota, or Criptext account with Delta
+Chat; they do not offer receiving mails via IMAP.</li>
+  <li>In any case you can use LeOS-Delta to send Messages to people who use
+Protonmail, Tutanota, or Criptext. Those messages will not be End-to-End
+encrypted, though. The End-to-End encryption those providers offer is not 
+compatible with <a href="https://autocrypt.org/">Autocrypt</a>, the standard LeOS-Delta
+uses.</li>
+  <li>LeOS-Delta can e2e-encrypt through any e-mail provider with any
+<a href="https://autocrypt.org/dev-status.html">Autocrypt-enabled e-mail app</a>.</li>
+</ul>
+    
+      <h3 id="ich-bin-an-technischen-details-interessiert-gibt-es-hierzu-weitere-infos">
+        
+        
+          Ich bin an technischen Details interessiert. Gibt es hierzu weitere Infos? <a href="#ich-bin-an-technischen-details-interessiert-gibt-es-hierzu-weitere-infos" class="anchor"></a>
+        
+        
+      </h3>
+
+<ul>
+  <li>Siehe hierzu <a href="https://github.com/deltachat/deltachat-core-rust/blob/master/standards.md#standards-used-in-delta-chat">in LeOS-Delta genutzte Standards</a>.</li>
+</ul>
+    
+      <h3 id="wie-wird-delta-chat-finanziert">
+        
+        
+          Wie wird LeOS-Delta finanziert? <a href="#wie-wird-delta-chat-finanziert" class="anchor"></a>
+        
+        
+      </h3>
+
+<p>LeOS-Delta does not receive any Venture Capital and
+is not indebted, and under no pressure to produce huge profits, or to 
+sell users and their friends and family to advertisers (or worse). 
+We rather use public funding sources, so far from EU and US origins, to help
+our efforts in instigating a decentralized and diverse chat messaging eco-system
+based on Free and Open-Source community developments.</p>
+
+<p>Concretely, LeOS-Delta developments have so far been funded from these sources:</p>
+
+<ul>
+  <li>
+    <p>The <a href="https://nextleap.eu">NEXTLEAP</a> EU project funded the research
+and implementation of verified groups and setup contact protocols
+in 2017 and 2018 and also helped to integrate End-to-End Encryption
+through <a href="https://autocrypt.org">Autocrypt</a>.</p>
+  </li>
+  <li>
+    <p>The <a href="https://opentechfund.org">Open Technology Fund</a> gave us a 
+first 2018/2019 grant (~$200K) during which we majorly improved the Android app 
+and released a first Desktop app beta version, and which moreover 
+moored our feature developments in UX research in human rights contexts, 
+see our concluding <a href="https://delta.chat/en/2019-07-19-uxreport">Needfinding and UX report</a>.
+The second 2019/2020 grant (~$300K) helped us to 
+release Delta/iOS versions, to convert our core library to Rust, and
+to provide new features for all platforms.</p>
+  </li>
+  <li>
+    <p>The <a href="https://nlnet.nl/">NLnet foundation</a> granted in 2019/2020 EUR 46K for
+completing Rust/Python bindings and instigating a Chat-bot ecosystem.</p>
+  </li>
+  <li>
+    <p>In 2021 we received further EU funding for two Next-Generation-Internet
+proposals, namely for <a href="https://dapsi.ngi.eu/hall-of-fame/eppd/">EPPD - e-mail provider portability directory</a> (~97K EUR) and <a href="https://nlnet.nl/project/EmailPorting/">AEAP - email address porting</a> (~90K EUR) which resulted in better multi-account support, improved QR-code contact and group setups and many networking improvements on all platforms.</p>
+  </li>
+  <li>
+    <p>For 2021/2022 we are receiving <em>Internet Freedom</em> funding (~500K USD) from the
+U.S. Bureau of Democracy, Human Rights and Labor (DRL). 
+This funding supports our long-running goals to make LeOS-Delta more usable 
+and compatible with a wide range of e-mail servers world-wide, and more resilient and secure
+in places often affected by internet censorship and shutdowns.</p>
+  </li>
+  <li>
+    <p>Sometimes we receive one-time donations from private individuals for
+which we are grateful. For example, in 2021 a generous individual bank-wired us 4K EUR 
+with the subject “keep up the good developments!”. We use such money to fund
+development gatherings or to care for ad-hoc expenses that can not easily be predicted
+for or reimbursed from public funding grants.</p>
+  </li>
+  <li>
+    <p>Last but by far not least beteiligen sich verschiedene ExpertInnen und Engagierte pro bono an LeOS-Delta. Sie erhalten dafür teils nur wenig, oftmals sogar überhaupt kein Geld. Ohne sie wäre LeOS-Delta nicht im entferntesten das, was es heute ist!</p>
+  </li>
+</ul>
+
+<p>The monetary funding mentioned above is mostly organized by merlinux GmbH in
+Freiburg (Germany), and is distributed to more than a dozen contributors world-wide.</p>
+
+<p>Funding for second half of 2022 and especially for 2023 is an ongoing issue of concern. Apart from applying for more public funding we want to become more independent from government-related funding sources. Please see <a href="https://delta.chat/en/contribute">LeOS-Delta Contribution channels</a> for both monetary and development related support possibilities.</p>
+
+
+
+
+
+</body></html>

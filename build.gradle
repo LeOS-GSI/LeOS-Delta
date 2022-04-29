@@ -1,0 +1,253 @@
+buildscript {
+    repositories {
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven {
+            url "https://repo1.maven.org/maven2"
+            jcenter()
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.3'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    google()
+    mavenCentral()
+    maven {
+        // Used only for PhotoView
+        url "https://www.jitpack.io"
+        name 'JitPack Github wrapper'
+    }
+    jcenter()
+}
+
+dependencies {
+    implementation 'androidx.sharetarget:sharetarget:1.1.0'
+    implementation 'androidx.webkit:webkit:1.4.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
+    implementation 'androidx.exifinterface:exifinterface:1.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.2.0'
+    implementation 'androidx.work:work-runtime:2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.9.6' // plays video and audio
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.9.6'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0' // QR Code scanner
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9.2' // used as JSON library
+    implementation "me.leolin:ShortcutBadger:1.1.16" // display messagecount on the home screen icon.
+    implementation 'com.jpardogo.materialtabstrip:library:1.0.9' // used in the emoji selector for the tab selection.
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3' // does the zooming on photos / media
+    implementation 'com.github.penfeizhou.android.animation:glide-plugin:2.10.0' // APNG & animated webp support.
+    implementation 'com.caverock:androidsvg-aar:1.4' // SVG support.
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    annotationProcessor 'androidx.annotation:annotation:1.1.0'
+    implementation 'com.makeramen:roundedimageview:2.1.0' // crops the avatars to circles
+    implementation 'com.pnikosis:materialish-progress:1.5' // used only in the "Progress Wheel" in Share Activity.
+    implementation 'com.soundcloud.android:android-crop:0.9.10@aar' // used in Group Select Avatar, should be unified with profie
+    implementation 'com.nineoldandroids:library:2.4.0' // DEPRECATED! Used to slide in the half-camera.
+    implementation 'mobi.upod:time-duration-picker:1.1.3' // Used to pick the time for inactivity.
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'  // number of unread messages,
+         // the one-letter circle for the contacts (when there is not avatar) and a white background.
+    implementation 'com.googlecode.mp4parser:isoparser:1.0.6' // MP4 recoding; upgrading eg. to 1.1.22 breaks recoding, however, i have not investigated further, just reset to 1.0.6
+    implementation ('com.davemorrissey.labs:subsampling-scale-image-view:3.6.0') { // for the zooming on photos / media
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    implementation 'com.annimon:stream:1.1.8' // brings future java streams api to SDK Version < 24
+    implementation 'com.codewaves.stickyheadergrid:stickyheadergrid:0.9.4' // glues the current time segment text in the gallery to the top.
+    implementation 'org.maplibre.gl:android-sdk:9.4.0'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:1.7.1'
+    testImplementation 'org.mockito:mockito-core:1.9.5'
+    testImplementation 'org.powermock:powermock-api-mockito:1.6.1'
+    testImplementation 'org.powermock:powermock-module-junit4:1.6.1'
+    testImplementation 'org.powermock:powermock-module-junit4-rule:1.6.1'
+    testImplementation 'org.powermock:powermock-classloading-xstream:1.6.1'
+
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.3.0'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'com.android.support:support-annotations:24.0.0'
+
+    androidTestImplementation ('org.assertj:assertj-core:1.7.1') {
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+    }
+}
+android {
+    flavorDimensions "none"
+    compileSdkVersion 30
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        versionCode 161666
+        versionName "1312"
+
+        applicationId "com.leos.delta"
+        multiDexEnabled true
+
+        minSdkVersion 16
+        targetSdkVersion 30
+
+        vectorDrawables.useSupportLibrary = true
+
+        // base name of the generated apk
+        project.ext.set("archivesBaseName", "LeOS-Delta");
+
+        buildConfigField "boolean", "DEV_BUILD", "false"
+        buildConfigField "String", "MAP_ACCESS_TOKEN", '"pk.eyJ1IjoiZGVsdGFjaGF0IiwiYSI6ImNqc3c1aWczMzBjejY0M28wZmU0a3cwMzMifQ.ZPTH9dFJaav06RAu4rTYHw"'
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "TEST_ADDR", buildConfigProperty("TEST_ADDR"))
+        buildConfigField("String", "TEST_MAIL_PW", buildConfigProperty("TEST_MAIL_PW"))
+        buildConfigField("String", "NDK_ARCH", getNdkArch())
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'LICENSE'
+        exclude 'NOTICE'
+        exclude 'asm-license.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+
+    signingConfigs {
+        signingConfigs {
+            debug {
+                // add `DC_DEBUG_STORE_FILE=/path/to/debug.keystore` to `~/.gradle/gradle.properties`
+                if(project.hasProperty("DC_DEBUG_STORE_FILE" )) {
+                    storeFile file(DC_DEBUG_STORE_FILE )
+                }
+            }
+            release {
+                // can be defined at `~/.gradle/gradle.properties` or at "Build/Generate signed APK"
+                if(project.hasProperty("DC_RELEASE_STORE_FILE")) {
+                    storeFile file('/media/ich/data/AndroidApks/signkey.jks')
+                    storePassword 'Sommer69'
+                    keyAlias 'delta'
+                    keyPassword 'Sommer69'
+                }
+            }
+        }
+        release {
+            storeFile file('/media/ich/data/AndroidApks/signkey.jks')
+            storePassword 'Sommer69'
+            keyAlias 'delta'
+            keyPassword 'Sommer69'
+        }
+        delta {
+        }
+        release
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            applicationIdSuffix ".beta"
+        }
+        release {
+            // minification and proguard disabled for now.
+            //
+            // when enabled, it can cut down apk size about 6%,
+            // however this also has the potential to break things.
+            // so exceptions are needed and have to be maintained.
+            // (see git-history and https://github.com/deltachat/deltachat-android/issues/905 )
+            //
+            // nb: it is highly recommended to use the same settings in debug+release -
+            // otherwise problems might be noticed delayed only
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+        fat {
+            dimension "none"
+        }
+        gplay {
+            dimension "none"
+            applicationId "chat.delta"
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = outputFileName
+                .replace("deltachat-android", "deltachat")
+                .replace(".apk", "-${variant.versionName}.apk")
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+        androidTest {
+            java.srcDirs = ['androidTest']
+        }
+    }
+
+     lintOptions {
+        abortOnError false
+    }
+}
+
+String buildConfigProperty(String name) {
+    return "\"${propertyOrEmpty(name)}\""
+}
+
+String propertyOrEmpty(String name) {
+    Object p = findProperty(name)
+    if (p == null) return environmentVariable(name)
+    return (String) p
+}
+
+static String environmentVariable(String name) {
+    String env = System.getenv(name)
+    if (env == null) return ""
+    return env
+}
+
+String getNdkArch() {
+    Properties properties = new Properties()
+    def file = project.rootProject.file('ndkArch')
+    if (!file.exists()) return "\"\""
+    properties.load(file.newDataInputStream())
+    def arch = properties.getProperty('NDK_ARCH')
+    if (arch == null) return "\"\""
+    return "\"$arch\""
+}

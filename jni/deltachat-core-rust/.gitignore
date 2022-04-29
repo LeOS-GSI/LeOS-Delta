@@ -1,0 +1,35 @@
+/target
+**/*.rs.bk
+/build
+
+# ignore vi temporaries
+*~
+*.swp
+*.swo
+
+include
+.dc-history.txt
+*.db
+*.db-blobs
+
+python/.eggs
+python/.tox
+*.egg-info
+__pycache__
+python/src/deltachat/capi*.so
+python/.venv/
+
+python/liveconfig*
+
+# ignore doxgen generated files
+deltachat-ffi/html
+deltachat-ffi/xml
+
+.rsynclist
+
+coverage/
+.DS_Store
+.vscode/launch.json
+python/accounts.txt
+python/all-testaccounts.txt
+tmp/
